@@ -187,7 +187,7 @@ export default function LetterScene() {
 
             <div className="relative z-10 px-8 py-10 sm:px-12 sm:py-12">
               <p className="text-center font-body text-[9px] uppercase tracking-[0.4em] text-[#7b3fa0]">
-                Para kay Judielle Rovie
+                Para sa aking Bestfriend & Lover
               </p>
 
               <div
