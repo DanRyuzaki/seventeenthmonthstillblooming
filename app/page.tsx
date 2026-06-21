@@ -28,8 +28,6 @@ export default function Home() {
   ];
 
   const handleEnter = () => {
-    // Fire the magical payoff: light sweep + petal burst + a soft wind whoosh,
-    // then reveal the slideshow as the burst settles.
     setGlareTrigger((n) => n + 1);
     setBurstTrigger((n) => n + 1);
     playWindWhoosh(0.8);

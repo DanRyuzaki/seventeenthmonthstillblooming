@@ -32,7 +32,7 @@ export default function GalleryScene() {
 
   return (
     <section className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden px-4 py-8 sm:py-12">
-      {/* Section eyebrow */}
+      {}
       <motion.div
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
@@ -45,13 +45,13 @@ export default function GalleryScene() {
         <div className="h-px w-14 shimmer-line" />
       </motion.div>
 
-      {/* Ambient glow behind the carousel */}
+      {}
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[40vh] w-[80vw] rounded-full opacity-25 blur-[80px]"
         style={{ background: "radial-gradient(circle, #d456b9, transparent 70%)" }}
       />
 
-      {/* Carousel */}
+      {}
       <div className="relative mt-6 flex w-full max-w-lg items-center justify-center sm:mt-8" style={{ height: isCompact ? "44vh" : "52vh" }}>
         <AnimatePresence initial={false} custom={direction}>
           {PHOTOS.map((photo, i) => {
@@ -79,7 +79,7 @@ export default function GalleryScene() {
                 initial={false}
                 transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
               >
-                {/* Photo card with polaroid effect */}
+                {}
                 <div
                   className="relative overflow-hidden"
                   style={{
@@ -102,7 +102,7 @@ export default function GalleryScene() {
                     className="object-cover"
                     priority={i === 0}
                   />
-                  {/* Cinematic overlay */}
+                  {}
                   <div
                     className="absolute inset-0"
                     style={{
@@ -111,7 +111,7 @@ export default function GalleryScene() {
                         : "rgba(0,0,0,0.4)",
                     }}
                   />
-                  {/* Active: gold frame accent + corner glints */}
+                  {}
                   {isActive && (
                     <>
                       <div

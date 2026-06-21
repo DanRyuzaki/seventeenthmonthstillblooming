@@ -8,7 +8,6 @@ type TulipProps = {
   fill?: string;
   delay?: number;
   animate?: boolean;
-  /** Unique id suffix so multiple tulips on one page don't share gradient/filter ids */
   uid?: string;
 };
 
@@ -51,7 +50,7 @@ export default function Tulip({
         </filter>
       </defs>
 
-      {/* Stem */}
+      {}
       <motion.path
         d="M60 120 C 60 148, 58 172, 60 198"
         stroke={stroke}
@@ -62,7 +61,7 @@ export default function Tulip({
         animate={animate ? { pathLength: 1, opacity: 1 } : undefined}
         transition={{ duration: 1.2, delay: delay + 0.4, ease: "easeOut" }}
       />
-      {/* Leaf */}
+      {}
       <motion.path
         d="M60 162 C 38 156, 22 140, 19 117 C 43 120, 57 135, 60 162 Z"
         stroke={stroke}
@@ -76,7 +75,7 @@ export default function Tulip({
       />
 
       <g filter={`url(#${glowId})`}>
-        {/* Left outer petal */}
+        {}
         <motion.path
           d="M60 68 C 36 70, 21 90, 26 116 C 30 133, 47 140, 60 122 C 50 106, 47 84, 60 68 Z"
           stroke="var(--color-gold-soft)"
@@ -89,7 +88,7 @@ export default function Tulip({
           transition={{ duration: 1.1, delay, ease: [0.22, 1, 0.36, 1] }}
           style={{ transformOrigin: "60px 122px" }}
         />
-        {/* Right outer petal */}
+        {}
         <motion.path
           d="M60 68 C 84 70, 99 90, 94 116 C 90 133, 73 140, 60 122 C 70 106, 73 84, 60 68 Z"
           stroke="var(--color-gold-soft)"
@@ -102,7 +101,7 @@ export default function Tulip({
           transition={{ duration: 1.1, delay, ease: [0.22, 1, 0.36, 1] }}
           style={{ transformOrigin: "60px 122px" }}
         />
-        {/* Inner left petal */}
+        {}
         <motion.path
           d="M60 72 C 46 82, 44 104, 56 120 C 62 110, 62 88, 60 72 Z"
           stroke="var(--color-gold-bright)"
@@ -115,7 +114,7 @@ export default function Tulip({
           transition={{ duration: 0.9, delay: delay + 0.1, ease: [0.22, 1, 0.36, 1] }}
           style={{ transformOrigin: "60px 122px" }}
         />
-        {/* Inner right petal */}
+        {}
         <motion.path
           d="M60 72 C 74 82, 76 104, 64 120 C 58 110, 58 88, 60 72 Z"
           stroke="var(--color-gold-bright)"
@@ -128,7 +127,7 @@ export default function Tulip({
           transition={{ duration: 0.9, delay: delay + 0.1, ease: [0.22, 1, 0.36, 1] }}
           style={{ transformOrigin: "60px 122px" }}
         />
-        {/* Center petal */}
+        {}
         <motion.path
           d="M60 60 C 47 76, 45 106, 60 124 C 75 106, 73 76, 60 60 Z"
           stroke="var(--color-gold-bright)"
@@ -141,7 +140,7 @@ export default function Tulip({
           transition={{ duration: 1.0, delay: delay + 0.18, ease: [0.22, 1, 0.36, 1] }}
           style={{ transformOrigin: "60px 124px" }}
         />
-        {/* Stamen highlight */}
+        {}
         <motion.circle
           cx="60"
           cy="88"
@@ -154,7 +153,7 @@ export default function Tulip({
         />
       </g>
 
-      {/* Tiny sparkle accents that twinkle once bloomed */}
+      {}
       {[
         { x: 32, y: 78, r: 1.4, d: 0 },
         { x: 90, y: 95, r: 1.1, d: 0.6 },

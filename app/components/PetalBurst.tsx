@@ -4,26 +4,26 @@ import { useEffect, useRef } from "react";
 
 type BurstPetal = {
   id: number;
-  x: number;       // start x (vw)
-  y: number;       // start y (vh)
-  vx: number;      // x velocity
-  vy: number;      // y velocity
+  x: number;       
+  y: number;       
+  vx: number;      
+  vy: number;      
   size: number;
   rotation: number;
   rotSpeed: number;
   color: string;
   opacity: number;
-  life: number;    // 0..1
+  life: number;    
   shape: "petal" | "rose" | "spark";
 };
 
 const COLORS = [
-  "#f0a0cc", // rose
-  "#b87ef0", // violet glow
-  "#d4af7a", // gold
-  "#e8d9f0", // lilac
-  "#c04caa", // magenta
-  "#f5d98c", // gold bright
+  "#f0a0cc", 
+  "#b87ef0", 
+  "#d4af7a", 
+  "#e8d9f0", 
+  "#c04caa", 
+  "#f5d98c", 
 ];
 
 function drawPetal(
@@ -50,7 +50,6 @@ function drawPetal(
     ctx.fill();
   } else if (shape === "rose") {
     ctx.beginPath();
-    // 5-petal rose via polar: r = cos(5θ/2)... simplified to path
     for (let i = 0; i < 5; i++) {
       const angle = (i / 5) * Math.PI * 2;
       const px = Math.cos(angle) * size;
@@ -60,7 +59,6 @@ function drawPetal(
     ctx.fillStyle = color;
     ctx.fill();
   } else {
-    // teardrop petal
     ctx.beginPath();
     ctx.moveTo(0, -size);
     ctx.bezierCurveTo(size * 0.6, -size * 0.5, size * 0.6, size * 0.5, 0, size * 0.8);
@@ -77,18 +75,15 @@ function drawPetal(
 function createBurst(count: number): BurstPetal[] {
   const shapes: BurstPetal["shape"][] = ["petal", "petal", "petal", "rose", "spark"];
   return Array.from({ length: count }, (_, i) => {
-    // Most originate from random areas across the screen (wind-like dispersal)
     const spreadMode = Math.random();
     let x: number, y: number, vx: number, vy: number;
 
     if (spreadMode < 0.3) {
-      // From top, falling down with wind
       x = Math.random() * 100;
       y = -5 + Math.random() * 20;
       vx = (Math.random() - 0.3) * 2.5;
       vy = 1.5 + Math.random() * 2.5;
     } else if (spreadMode < 0.6) {
-      // From center burst
       const angle = Math.random() * Math.PI * 2;
       const speed = 1.5 + Math.random() * 3;
       x = 40 + Math.random() * 20;
@@ -96,7 +91,6 @@ function createBurst(count: number): BurstPetal[] {
       vx = Math.cos(angle) * speed;
       vy = Math.sin(angle) * speed;
     } else {
-      // Drifting in from sides
       x = Math.random() > 0.5 ? -5 : 105;
       y = Math.random() * 100;
       vx = x < 0 ? 1.5 + Math.random() * 2 : -(1.5 + Math.random() * 2);
@@ -142,7 +136,7 @@ export default function PetalBurst({ trigger }: { trigger: number }) {
     petalsRef.current = createBurst(55);
     startRef.current = performance.now();
 
-    const DURATION = 2200; // ms
+    const DURATION = 2200; 
 
     const tick = (now: number) => {
       const elapsed = now - startRef.current;
@@ -151,15 +145,13 @@ export default function PetalBurst({ trigger }: { trigger: number }) {
       ctx.clearRect(0, 0, W, H);
 
       for (const p of petalsRef.current) {
-        // Physics: accelerate, drift
         p.x += p.vx * 0.7;
-        p.y += p.vy * 0.7 + 0.08; // slight gravity
-        p.vx *= 0.993; // air resistance
+        p.y += p.vy * 0.7 + 0.08; 
+        p.vx *= 0.993; 
         p.vy *= 0.993;
         p.rotation += p.rotSpeed;
         p.life = t;
 
-        // fade in first 10%, hold, fade out last 40%
         let alpha = p.opacity;
         if (t < 0.1) alpha = p.opacity * (t / 0.1);
         else if (t > 0.6) alpha = p.opacity * (1 - (t - 0.6) / 0.4);

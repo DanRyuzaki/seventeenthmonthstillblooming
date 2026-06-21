@@ -1,9 +1,5 @@
 "use client";
 
-/**
- * Renders a photo (or placeholder) clipped into a soft petal/teardrop shape,
- * echoing the tulip motif. Each instance needs a unique id for its clipPath.
- */
 export default function PetalFrame({
   id,
   className,

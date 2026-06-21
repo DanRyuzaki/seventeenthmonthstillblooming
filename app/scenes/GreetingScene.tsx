@@ -20,7 +20,7 @@ const item = {
 export default function GreetingScene() {
   return (
     <section className="relative flex h-full w-full flex-col items-center justify-center px-6 text-center overflow-hidden">
-      {/* Flanking tulips — larger, more dramatic */}
+      {}
       <div className="pointer-events-none absolute bottom-0 left-0 h-[50vh] w-28 hidden sm:block sm:left-4 md:w-36 bloom-glow">
         <Tulip delay={0.7} uid="greet-left" />
       </div>
@@ -28,7 +28,7 @@ export default function GreetingScene() {
         <Tulip delay={1.0} uid="greet-right" />
       </div>
 
-      {/* Mobile tulip — top center, smaller but glowing */}
+      {}
       <div className="pointer-events-none absolute top-6 left-1/2 -translate-x-1/2 h-20 w-14 sm:hidden">
         <div
           className="absolute inset-0 -z-10 rounded-full blur-xl pulse-soft"
@@ -52,13 +52,13 @@ export default function GreetingScene() {
           Danielle &nbsp;&middot;&nbsp; Judielle
         </motion.span>
 
-        {/* Animated shimmer divider */}
+        {}
         <motion.div
           variants={item}
           className="mt-5 h-px w-20 shimmer-line"
         />
 
-        {/* Main headline — huge display type */}
+        {}
         <motion.h1
           variants={item}
           className="font-display mt-8 text-[18vw] italic leading-[0.88] text-shadow-glow sm:text-[11vw] md:text-[8.5rem]"
@@ -73,7 +73,7 @@ export default function GreetingScene() {
           17<span className="align-super text-[0.38em]">th</span>
         </motion.h1>
 
-        {/* Sparkle accents flanking the headline */}
+        {}
         {[
           { l: 8, t: 38, size: 5, delay: 0.3 },
           { l: 90, t: 30, size: 4, delay: 1.1 },
@@ -97,7 +97,7 @@ export default function GreetingScene() {
           />
         ))}
 
-        {/* "Monthsary" in lilac — lighter, contrasting */}
+        {}
         <motion.p
           variants={item}
           className="font-display mt-2 text-[7vw] italic leading-tight text-[var(--color-violet-glow)] text-shadow-violet sm:text-[4vw] md:text-[3.2rem]"
@@ -112,7 +112,7 @@ export default function GreetingScene() {
           bal. &#10084;
         </motion.p>
 
-        {/* Decorative bottom label */}
+        {}
         <motion.div variants={item} className="mt-10 flex items-center gap-4">
           <span className="h-px w-12 bg-[var(--color-gold)]/35" />
           <span className="font-body text-[9px] uppercase tracking-[0.32em] text-[var(--color-lilac)]/50">
@@ -122,7 +122,7 @@ export default function GreetingScene() {
         </motion.div>
       </motion.div>
 
-      {/* Subtle radial floor glow */}
+      {}
       <div
         className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 h-48 w-[70vw] blur-3xl opacity-35"
         style={{ background: "radial-gradient(ellipse at 50% 100%, #d456b9, transparent 70%)" }}

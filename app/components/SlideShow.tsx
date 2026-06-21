@@ -110,7 +110,7 @@ export default function SlideShow({ scenes, initialIndex = 0 }: SlideShowProps) 
         </motion.div>
       </AnimatePresence>
 
-      {/* Right-side progress rail — roman numerals */}
+      {}
       <div className="pointer-events-none fixed right-5 top-1/2 z-50 flex -translate-y-1/2 flex-col items-center gap-3 sm:right-8">
         {scenes.map((_, i) => (
           <button
@@ -145,7 +145,7 @@ export default function SlideShow({ scenes, initialIndex = 0 }: SlideShowProps) 
         ))}
       </div>
 
-      {/* Scroll hint with animated chevrons */}
+      {}
       <AnimatePresence>
         {index === 0 && (
           <motion.div

@@ -10,9 +10,6 @@ export default function MusicToggle() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    // Attach to the shared theme-music instance rather than creating a new
-    // one — playback was very likely already started by the "open it, bal"
-    // click (see EntryGate + utils/themeMusic), so this just mirrors it.
     const audio = getThemeAudio();
     audioRef.current = audio;
 
@@ -25,8 +22,6 @@ export default function MusicToggle() {
     audio.addEventListener("canplaythrough", markReady);
     audio.addEventListener("error", markUnready);
 
-    // Reflect whatever state the audio is already in right now (it may
-    // already be mid-playback by the time this component mounts).
     syncPlaying();
     if (audio.readyState >= 3) markReady();
 
@@ -66,7 +61,7 @@ export default function MusicToggle() {
           : "inset 0 1px 0 rgba(255,255,255,0.06)",
       }}
     >
-      {/* Animated bars */}
+      {}
       <div className="flex items-end gap-[3px]" style={{ height: "14px" }}>
         {[0, 1, 2, 3].map((i) => (
           <motion.span

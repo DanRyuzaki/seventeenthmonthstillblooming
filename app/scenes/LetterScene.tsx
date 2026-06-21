@@ -17,10 +17,6 @@ const LETTER_BODY = [
 export default function LetterScene() {
   const [opened, setOpened] = useState(false);
 
-  // Callback ref: fires the instant the scroll container mounts.
-  // Attaches a wheel listener that stops propagation while the letter
-  // still has content to scroll in that direction, so the SlideShow
-  // only receives the event once the reader has hit the top or bottom edge.
   const scrollRef = useCallback((el: HTMLDivElement | null) => {
     if (!el) return;
 
@@ -32,25 +28,23 @@ export default function LetterScene() {
       const scrollingUp = e.deltaY < 0;
       const scrollingDown = e.deltaY > 0;
 
-      // Only let the event bubble when we are already at the relevant edge.
       if (!(scrollingUp && atTop) && !(scrollingDown && atBottom)) {
         e.stopPropagation();
       }
     };
 
-    // passive: true is fine — we never call preventDefault, only stopPropagation.
     el.addEventListener("wheel", onWheel, { passive: true });
   }, []);
 
   return (
     <section className="relative flex h-full w-full items-center justify-center px-6 overflow-hidden">
-      {/* Soft violet glow behind */}
+      {}
       <div
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{ background: "radial-gradient(ellipse at 50% 60%, rgba(116,64,184,0.45), transparent 70%)" }}
       />
 
-      {/* Twinkle dust around the envelope */}
+      {}
       {!opened &&
         [
           { l: 12, t: 18, d: 0 },
@@ -88,7 +82,7 @@ export default function LetterScene() {
             className="group relative flex flex-col items-center"
             aria-label="Open the letter"
           >
-            {/* Envelope card */}
+            {}
             <div
               className="relative w-[82vw] max-w-[340px] rounded-sm border shadow-[0_40px_100px_rgba(0,0,0,0.65)]"
               style={{
@@ -99,12 +93,12 @@ export default function LetterScene() {
                 maxHeight: "480px",
               }}
             >
-              {/* Inner border */}
+              {}
               <div
                 className="absolute inset-3 border pointer-events-none"
                 style={{ borderColor: "rgba(224,185,126,0.14)" }}
               />
-              {/* Corner flourishes */}
+              {}
               {["top-4 left-4", "top-4 right-4 rotate-90", "bottom-4 right-4 rotate-180", "bottom-4 left-4 -rotate-90"].map((pos, i) => (
                 <svg key={i} className={`absolute ${pos} pointer-events-none`} width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path d="M1 1 H7 M1 1 V7" stroke="var(--color-gold)" strokeWidth="0.8" strokeOpacity="0.6" strokeLinecap="round" />
@@ -121,7 +115,7 @@ export default function LetterScene() {
                   Judielle
                 </span>
 
-                {/* Wax seal */}
+                {}
                 <motion.div
                   whileHover={{ scale: 1.12, rotate: 5 }}
                   animate={{ boxShadow: ["0 6px 20px rgba(0,0,0,0.4)", "0 6px 32px rgba(212,86,185,0.55)", "0 6px 20px rgba(0,0,0,0.4)"] }}
@@ -132,14 +126,14 @@ export default function LetterScene() {
                     boxShadow: "inset 0 2px 10px rgba(255,255,255,0.35), 0 8px 26px rgba(0,0,0,0.5)",
                   }}
                 >
-                  {/* Gold rim */}
+                  {}
                   <div
                     className="absolute inset-0 rounded-full"
                     style={{ boxShadow: "inset 0 0 0 1.5px rgba(224,185,126,0.4)" }}
                   />
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                     <circle cx="20" cy="20" r="12" stroke="rgba(255,233,173,0.55)" strokeWidth="0.8" />
-                    {/* Tiny tulip emblem, echoing the site motif */}
+                    {}
                     <path
                       d="M20 10 C15 12, 13 18, 16 24 C18 27, 22 27, 24 24 C27 18, 25 12, 20 10 Z"
                       stroke="rgba(255,243,224,0.85)"
@@ -176,10 +170,10 @@ export default function LetterScene() {
               boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 60px rgba(199,148,250,0.1)",
             }}
           >
-            {/* Ruled paper lines */}
+            {}
             <div className="paper-texture absolute inset-0 pointer-events-none opacity-100" />
 
-            {/* Left margin line */}
+            {}
             <div
               className="pointer-events-none absolute top-0 bottom-0 left-[60px] w-px"
               style={{ background: "rgba(192,76,170,0.12)" }}

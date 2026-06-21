@@ -15,13 +15,13 @@ const fadeUp = {
 export default function SpotifyScene() {
   return (
     <section className="relative flex h-full w-full flex-col items-center justify-center gap-6 px-6 text-center overflow-hidden">
-      {/* Floor glow */}
+      {}
       <div
         className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 h-64 w-[80vw] blur-3xl opacity-30"
         style={{ background: "radial-gradient(ellipse at 50% 100%, #d456b9, transparent 70%)" }}
       />
 
-      {/* Bottom tulip */}
+      {}
       <div className="pointer-events-none absolute bottom-0 left-1/2 h-[36vh] w-28 -translate-x-1/2 bloom-glow">
         <Tulip delay={0.4} uid="spotify" />
       </div>
@@ -32,7 +32,7 @@ export default function SpotifyScene() {
         animate="show"
         className="relative z-10 flex flex-col items-center gap-4 w-full max-w-md"
       >
-        {/* Eyebrow */}
+        {}
         <motion.div variants={fadeUp} className="flex flex-col items-center gap-2">
           <span className="font-body text-[9px] uppercase tracking-[0.42em] text-[var(--color-gold-soft)]">
             our theme song
@@ -40,7 +40,7 @@ export default function SpotifyScene() {
           <div className="h-px w-14 shimmer-line" />
         </motion.div>
 
-        {/* Title block */}
+        {}
         <motion.div variants={fadeUp} className="flex flex-col items-center">
           <h2 className="text-foil font-display text-4xl italic sm:text-5xl">
             Ikaw at Ako
@@ -50,7 +50,7 @@ export default function SpotifyScene() {
           </p>
         </motion.div>
 
-        {/* Spotify embed — framed with gold border + glow */}
+        {}
         <motion.div
           variants={fadeUp}
           className="w-full overflow-hidden"
@@ -73,7 +73,7 @@ export default function SpotifyScene() {
           />
         </motion.div>
 
-        {/* Lyric caption */}
+        {}
         <motion.p
           variants={fadeUp}
           className="font-display max-w-xs text-lg italic text-[var(--color-lilac-dim)] leading-relaxed"
@@ -81,10 +81,10 @@ export default function SpotifyScene() {
           Kahit anong kanta pa ang tugtugin, ikaw at ako lang ang naririnig ko.
         </motion.p>
 
-        {/* Shimmer divider */}
+        {}
         <motion.div variants={fadeUp} className="h-px w-14 shimmer-line" />
 
-        {/* Closing line */}
+        {}
         <motion.p
           variants={fadeUp}
           className="font-body text-[9px] uppercase tracking-[0.32em] text-[var(--color-gold-soft)]/55"

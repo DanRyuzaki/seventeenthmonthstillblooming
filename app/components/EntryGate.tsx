@@ -9,9 +9,6 @@ export default function EntryGate({ onEnter }: { onEnter: () => void }) {
   const [closing, setClosing] = useState(false);
 
   const handleClick = () => {
-    // Start the theme song right here, inside the click — this is the only
-    // point in the flow that's still within the browser's "user gesture"
-    // window, so it's the one place autoplay is reliably allowed.
     primeAndPlayTheme();
     setClosing(true);
     setTimeout(onEnter, 900);
@@ -29,7 +26,7 @@ export default function EntryGate({ onEnter }: { onEnter: () => void }) {
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden"
           style={{ background: "linear-gradient(160deg, #0a0512 0%, #170c22 45%, #261232 100%)" }}
         >
-          {/* Background shimmer rings */}
+          {}
           {[1, 2, 3].map((i) => (
             <motion.div
               key={i}
@@ -47,7 +44,7 @@ export default function EntryGate({ onEnter }: { onEnter: () => void }) {
             />
           ))}
 
-          {/* Drifting glimmer dust around the gate */}
+          {}
           {[
             { l: 20, t: 25, s: 2, d: 0 },
             { l: 78, t: 30, s: 1.6, d: 0.8 },
@@ -74,7 +71,7 @@ export default function EntryGate({ onEnter }: { onEnter: () => void }) {
             />
           ))}
 
-          {/* Corner ornaments */}
+          {}
           {[
             "top-6 left-6",
             "top-6 right-6 rotate-90",
@@ -101,7 +98,7 @@ export default function EntryGate({ onEnter }: { onEnter: () => void }) {
             transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col items-center px-6 text-center relative z-10"
           >
-            {/* Tulip with soft halo glow behind it */}
+            {}
             <motion.div
               className="relative h-32 w-20 mb-2"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -123,10 +120,10 @@ export default function EntryGate({ onEnter }: { onEnter: () => void }) {
               transition={{ duration: 1.2, delay: 0.7 }}
               className="font-body text-[10px] uppercase text-[var(--color-gold-soft)]"
             >
-              for judielle rovie
+              for judielle rovie villacrusis
             </motion.p>
 
-            {/* Shimmer divider */}
+            {}
             <motion.div
               initial={{ scaleX: 0, opacity: 0 }}
               animate={{ scaleX: 1, opacity: 1 }}
@@ -172,7 +169,7 @@ export default function EntryGate({ onEnter }: { onEnter: () => void }) {
                 boxShadow: "0 0 24px rgba(199,148,250,0.12), inset 0 1px 0 rgba(255,255,255,0.06)",
               }}
             >
-              {/* Hover glow fill */}
+              {}
               <motion.span
                 className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{ background: "radial-gradient(circle at 50%, rgba(255,233,173,0.18), transparent 70%)" }}

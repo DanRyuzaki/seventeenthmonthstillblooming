@@ -15,7 +15,7 @@ const fadeUp = {
 export default function InvitationScene() {
   return (
     <section className="relative flex h-full w-full items-center justify-center px-6 overflow-hidden">
-      {/* Ambient bloom behind card */}
+      {}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -23,12 +23,12 @@ export default function InvitationScene() {
         }}
       />
 
-      {/* Top-center tulip */}
+      {}
       <div className="pointer-events-none absolute left-1/2 top-0 h-32 w-20 -translate-x-1/2 bloom-glow">
         <Tulip delay={0.5} uid="invitation" />
       </div>
 
-      {/* Invitation card */}
+      {}
       <motion.div
         initial={{ opacity: 0, scale: 0.92, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -42,12 +42,12 @@ export default function InvitationScene() {
           boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 60px rgba(199,148,250,0.1), inset 0 1px 0 rgba(255,255,255,0.06)",
         }}
       >
-        {/* Inner border */}
+        {}
         <div
           className="absolute inset-3 pointer-events-none sm:inset-5"
           style={{ border: "1px solid rgba(224,185,126,0.14)" }}
         />
-        {/* Corner ornaments */}
+        {}
         {["top-4 left-4", "top-4 right-4 rotate-90", "bottom-4 right-4 rotate-180", "bottom-4 left-4 -rotate-90"].map((pos, i) => (
           <svg key={i} className={`absolute ${pos} pointer-events-none`} width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M2 2 H8 M2 2 V8" stroke="var(--color-gold)" strokeWidth="0.7" strokeOpacity="0.55" strokeLinecap="round" />

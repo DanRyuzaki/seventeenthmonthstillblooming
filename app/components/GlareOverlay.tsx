@@ -15,7 +15,6 @@ type Sparkle = {
 };
 
 function generateSparkles(count: number, seed: number): Sparkle[] {
-  // Small per-burst offset keeps repeated bursts feeling distinct rather than identical.
   const seedOffset = (seed % 5) * 0.02;
   return Array.from({ length: count }, () => ({
     left: 10 + Math.random() * 80,
@@ -29,12 +28,7 @@ function generateSparkles(count: number, seed: number): Sparkle[] {
   }));
 }
 
-/**
- * A full-screen shimmer/glare flash that plays during scene transitions.
- * Uses a diagonal light-sweep layered over a brief iridescent bloom.
- */
 export default function GlareOverlay({ trigger }: { trigger: number }) {
-  // Recompute sparkle randomness only when a new burst fires, not on every render.
   const sparkles = useMemo(() => generateSparkles(18, trigger), [trigger]);
 
   return (
@@ -47,7 +41,7 @@ export default function GlareOverlay({ trigger }: { trigger: number }) {
           animate={{ opacity: [0, 1, 0.6, 0] }}
           transition={{ duration: 1.1, ease: [0.2, 0, 0.8, 1], times: [0, 0.15, 0.5, 1] }}
         >
-          {/* Diagonal glare sweep */}
+          {}
           <motion.div
             className="absolute inset-0"
             initial={{ x: "-120%", skewX: -15 }}
@@ -60,7 +54,7 @@ export default function GlareOverlay({ trigger }: { trigger: number }) {
             }}
           />
 
-          {/* Iridescent bloom center */}
+          {}
           <motion.div
             className="absolute inset-0 flex items-center justify-center"
             initial={{ opacity: 0, scale: 0.6 }}
@@ -77,7 +71,7 @@ export default function GlareOverlay({ trigger }: { trigger: number }) {
             />
           </motion.div>
 
-          {/* Fine sparkle dust */}
+          {}
           {sparkles.map((s, i) => (
             <motion.div
               key={i}
