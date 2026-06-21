@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   title: "Para sa'yo, Bal",
   description: "Happy 17th Monthsary",
   icons: {
-    icon: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/tulip-ico.svg",
+    apple: "/tulip-ico.svg",
   },
 };
 

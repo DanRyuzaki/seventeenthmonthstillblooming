@@ -6,6 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const LETTER_BODY = [
   "Happy 17th monthsary! Sa loob ng labing-pitong buwan, I am indeed grateful to be with you through all the ups and downs, and even for the last 3 years of lovey-dovey story.",
   "May mga pagkukulang, may mga malalang away, may mga hindi pagkakaintindihan, pero sa kabila ng lahat ng iyon, you have been my constant source of love, support, and happiness. I am truly blessed to have you in my life.",
+  "Sa tagal natin na magkasama, hindi sumasagi sa isip ko ang gumawa ng ganito bilang regalo. Kung gagawa man siguro ako, magiging katulad iyon ng tulips-garden, something na alam ko ay may purpose.",
+  "Pero sa pagkakataong ito, I want to give you something na hindi mo inaasahan, a letter that comes from the heart. And the way I will deliver it is ay sa paraan na alam ko.",
+  "Mahal, salamat sa lahat ng pagkakataon o panahon na ikaw ang nariyan para sa akin sa oras na walang-wala na ako. Minsan, napapaisip ko na kung hindi ka ginamit ng Lord, mahihirapan ako umusad sa holistically haha.",
+  "I just know you are not doing the bare minimum, for your love doesn't have maximums either, you are the manifestation of God's infinite love.",
   "Walang ibang dalangin kundi ay patuloy mo ako makita sa gitna ng hardin ng tulipan.",
   "Mahal na mahal kita, Bal.",
 ];

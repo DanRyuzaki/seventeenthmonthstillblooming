@@ -186,7 +186,7 @@ export default function EntryGate({ onEnter }: { onEnter: () => void }) {
               transition={{ delay: 2.2, duration: 1 }}
               className="mt-8 font-body text-[9px] uppercase tracking-[0.25em] text-[var(--color-lilac)]"
             >
-              danielle &middot; 2025
+              June 21st, 2026
             </motion.p>
           </motion.div>
         </motion.div>
