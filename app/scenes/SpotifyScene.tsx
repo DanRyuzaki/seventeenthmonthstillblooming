@@ -35,7 +35,7 @@ export default function SpotifyScene() {
         {}
         <motion.div variants={fadeUp} className="flex flex-col items-center gap-2">
           <span className="font-body text-[9px] uppercase tracking-[0.42em] text-[var(--color-gold-soft)]">
-            our theme song
+            a song that reminds me of us
           </span>
           <div className="h-px w-14 shimmer-line" />
         </motion.div>
