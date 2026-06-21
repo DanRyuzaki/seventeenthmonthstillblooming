@@ -8,11 +8,12 @@ const PHOTOS = [
   { src: "/photos/memory.1.jpg", caption: "the night the stars aligned once again :>" },
   { src: "/photos/memory.2.jpg", caption: "we we're able to do dinner dates na through our own money!" },
   { src: "/photos/memory.3.jpg", caption: "mwehehwhe mga selfie na ang di marunong ang kumuha HEHE XD" },
-  { src: "/photos/memory.4.jpg", caption: "the lamesa dam park date !!" },
+   { src: "/photos/memory.4.jpg", caption: "the lamesa dam park date !!" },
   { src: "/photos/memory.5.jpg", caption: "those smiles are something worth to keep :>" },
   { src: "/photos/memory.6.jpg", caption: "us, always <3" },
-s" },
-fault function GalleryScene() {
+];
+
+export default function GalleryScene() {
   const [active, setActive] = useState(0);
   const [direction, setDirection] = useState<1 | -1>(1);
   const [isCompact, setIsCompact] = useState(false);
