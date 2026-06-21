@@ -1,0 +1,48 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="petalOuter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c794fa"/>
+      <stop offset="45%" stop-color="#9b4fc9"/>
+      <stop offset="100%" stop-color="#4b1f85"/>
+    </linearGradient>
+    <linearGradient id="petalInner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0d8a8"/>
+      <stop offset="55%" stop-color="#d456b9"/>
+      <stop offset="100%" stop-color="#7440b8"/>
+    </linearGradient>
+    <linearGradient id="stemGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9b4fc9"/>
+      <stop offset="100%" stop-color="#4b1f85"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Stem -->
+  <path d="M50 66 C50 77, 48 88, 50 98" stroke="url(#stemGrad)" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  <!-- Leaf (kept low, tucked behind the petal cup) -->
+  <path d="M50 86 C39 84, 31 77, 29 66 C42 68, 48 75, 50 86 Z" fill="#7440b8" fill-opacity="0.5"/>
+
+  <!-- Left outer petal: rounded base, pointed tip, classic tulip lean -->
+  <path d="M50 18
+           C 38 24, 27 34, 25 48
+           C 23 60, 30 68, 40 67
+           C 47 66, 50 58, 48 48
+           C 46 38, 46 26, 50 18
+           Z" fill="url(#petalOuter)"/>
+  <!-- Right outer petal (mirror) -->
+  <path d="M50 18
+           C 62 24, 73 34, 75 48
+           C 77 60, 70 68, 60 67
+           C 53 66, 50 58, 52 48
+           C 54 38, 54 26, 50 18
+           Z" fill="url(#petalOuter)"/>
+  <!-- Center petal: tall, pointed tip -->
+  <path d="M50 8
+           C 41 20, 38 38, 42 54
+           C 44 62, 47 66, 50 68
+           C 53 66, 56 62, 58 54
+           C 62 38, 59 20, 50 8
+           Z" fill="url(#petalInner)"/>
+
+  <!-- Highlight -->
+  <ellipse cx="46" cy="24" rx="2.4" ry="7" fill="#ffe9ad" fill-opacity="0.5" transform="rotate(-10 46 24)"/>
+</svg>

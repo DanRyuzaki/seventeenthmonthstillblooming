@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+:root {
+  --color-aubergine: #150a1f;
+  --color-aubergine-deep: #0a0512;
+  --color-violet: #7440b8;
+  --color-violet-soft: #a972e0;
+  --color-violet-glow: #c794fa;
+  --color-violet-royal: #4b1f85;
+  --color-magenta: #d456b9;
+  --color-magenta-deep: #93208a;
+  --color-gold: #e0b97e;
+  --color-gold-soft: #f0d8a8;
+  --color-gold-bright: #ffe9ad;
+  --color-gold-deep: #b6863f;
+  --color-lilac: #ecdcfa;
+  --color-lilac-dim: #cdaee4;
+  --color-offwhite: #fdfaf8;
+  --color-rose: #f4aed6;
+  --color-opal: #e6e6ff;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-offwhite);
+  background: var(--color-aubergine);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Enhanced film grain */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSdhJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsdGVyPSd1cmwoI2EpJyBvcGFjaXR5PScwLjQnLz48L3N2Zz4=");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.text-shadow-glow {
+  text-shadow:
+    0 0 8px rgba(255, 233, 173, 0.5),
+    0 0 40px rgba(224, 185, 126, 0.5),
+    0 0 90px rgba(199, 148, 250, 0.3);
+}
+
+.text-shadow-violet {
+  text-shadow:
+    0 0 8px rgba(199, 148, 250, 0.4),
+    0 0 34px rgba(169, 114, 224, 0.65),
+    0 0 70px rgba(199, 148, 250, 0.35);
+}
+
+.bg-radial-violet {
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    rgba(116, 64, 184, 0.65),
+    transparent 65%
+  );
+}
+
+/* Gold-foil gradient text — sweeps slowly like light on metal */
+@keyframes foil-sweep {
+  0% { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+
+.text-foil {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-gold-deep) 0%,
+    var(--color-gold-bright) 20%,
+    var(--color-offwhite) 32%,
+    var(--color-gold-bright) 44%,
+    var(--color-gold) 60%,
+    var(--color-gold-deep) 75%,
+    var(--color-gold-bright) 90%,
+    var(--color-gold-deep) 100%
+  );
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: foil-sweep 7s linear infinite;
+  filter: drop-shadow(0 0 18px rgba(224, 185, 126, 0.35));
+}
+
+/* Gold shimmer animation for dividers */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-line {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(224, 185, 126, 0.2) 25%,
+    rgba(255, 233, 173, 0.95) 48%,
+    rgba(230, 230, 255, 0.9) 52%,
+    rgba(224, 185, 126, 0.95) 56%,
+    rgba(224, 185, 126, 0.2) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3.4s ease-in-out infinite;
+}
+
+/* Soft pulse for decorative elements */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+/* Twinkling star/glimmer dust */
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.4); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+.twinkle {
+  animation: twinkle 3.4s ease-in-out infinite;
+}
+
+/* Slow drifting aurora sheen across the backdrop */
+@keyframes aurora-drift {
+  0% { transform: translate(-8%, -4%) rotate(0deg) scale(1); }
+  50% { transform: translate(6%, 5%) rotate(8deg) scale(1.15); }
+  100% { transform: translate(-8%, -4%) rotate(0deg) scale(1); }
+}
+
+.aurora-drift {
+  animation: aurora-drift 26s ease-in-out infinite;
+}
+
+/* Petal/glow breathing for hero botanicals */
+@keyframes bloom-glow {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(199, 148, 250, 0.25)); }
+  50% { filter: drop-shadow(0 0 26px rgba(255, 233, 173, 0.4)); }
+}
+
+.bloom-glow {
+  animation: bloom-glow 4.5s ease-in-out infinite;
+}
+
+/* Letter paper texture */
+.paper-texture {
+  background-color: #fdf8f0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      rgba(107, 63, 160, 0.06) 28px
+    );
+}
