@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const PHOTOS = [
-  { src: "/photos/memory_1.jpg", caption: "the night the stars aligned once again :>" },
-  { src: "/photos/memory_2.jpg", caption: "we we're able to do dinner dates na through our own money!" },
-  { src: "/photos/memory_3.jpg", caption: "mwehehwhe mga selfie na ang di marunong ang kumuha HEHE XD" },
-  { src: "/photos/memory_4.jpg", caption: "our 2nd motmot" },
-  { src: "/photos/memory_5.jpg", caption: "proof we keep every memory" },
-  { src: "/photos/memory_6.jpg", caption: "us, always" },
+  { src: "/photos/memory.1.jpg", caption: "the night the stars aligned once again :>" },
+  { src: "/photos/memory.2.jpg", caption: "we we're able to do dinner dates na through our own money!" },
+  { src: "/photos/memory.3.jpg", caption: "mwehehwhe mga selfie na ang di marunong ang kumuha HEHE XD" },
+  { src: "/photos/memory.4.jpg", caption: "our 2nd motmot" },
+  { src: "/photos/memory.5.jpg", caption: "proof we keep every memory" },
+  { src: "/photos/memory.6.jpg", caption: "us, always" },
 ];
 
 export default function GalleryScene() {
